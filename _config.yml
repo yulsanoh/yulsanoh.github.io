@@ -109,10 +109,10 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:sanyulixxx@email.com"
+      url: "mailto:yulsanohDev@email.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://sanyulixxx.tistory.com"
+      # url: "https://sanyulixxx.tistory.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
