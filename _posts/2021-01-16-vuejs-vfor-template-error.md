@@ -16,7 +16,7 @@ last_modified_at: 2021-01-16T08:06:00-05:00
 # 컴포넌트 v-for 사용과 템플릿 범위에 따른 오류 정리
 
 컴포넌트에서 v-for을 이용해서 데이터 바인딩을 하던 도중
-<div>![에러화면 이미지]("/images/2021-01-16-vuejs-vfor-template-error.png")</div>
+<div>![에러화면 이미지](https://github.com/yulsanoh/yulsanoh.github.io/blob/main/_posts/images/2021-01-16-vuejs-vfor-template-error.png "에러화면 이미지")</div>
 
 <div style="color: red;">'Error compiling template: Cannot use v-for on stateful component root element because it renders multiple elements.'</div>
 <div style="color: red;">'Multiple root nodes returned from render function. Render function should return a single root node.'</div>
