@@ -155,19 +155,3 @@ _(flex-wrap 이미지의 모든 요소들의 `margin`과 `padding` 요소를 0�
 
 ### align-content
 21일 추가 예정
-<!-- ### align-content
-`align-content`는 교차 축(cross-axis)의 정렬 방법을 설정할 때 사용한다.
-
-<div class="notice--danger">flex-wrap 속성을 통해 flex-item들이 두 줄 이상이어야하고, 여백이 있어야 사용 가능합니다.</div>
-
-![css-display-flex-align-content-stretch](https://user-images.githubusercontent.com/58783926/105168112-fd511380-5b5c-11eb-9620-a054a47b5d13.jpg)
-
-* `align-content`가 `stretch`인 상태
-
-`stretch`인 상태의 경우 flex-item들이 height 값을 임의로 가지고 있지 않다면 위의 그림과 같이 교차 축을 채우기 위해서 flex-item의 height를 임의로 늘리게 됩니다.
-
-### align-items
-`align-items` 속성은 교차 축(cross-axis)에서의 정렬 방법을 정의한다.
-
-<div class="notice--danger">align-items 속성은 flex-wrap 속성을 통해 여러 줄(2줄 이상)이 될 때는 align-content 속성이 우선입니다.</div>
--->
