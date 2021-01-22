@@ -154,4 +154,95 @@ _(flex-wrap 이미지의 모든 요소들의 `margin`과 `padding` 요소를 0�
 그리고 `space-around`와 `space-between` 값인 이미지들의 각각의 간격들은 모두 동일하다.
 
 ### align-content
-21일 추가 예정
+`align-content`는 교차 축(cross-axis)의 정렬 방법을 설정할 때 사용한다. 아래의 모든 값에 대한 이미지는 주 축은 row;(`justify-content: row;`)이기 때문에 교차축은 가로의 교차되는 세로입니다. 그래서 세로의 시작부분인 위(천장)부분으로 부터 정렬이 시작되는 것입니다.
+
+<div class="notice--danger">flex-wrap 속성을 통해 flex-item들이 두 줄 이상이어야하고, 여백이 있어야 사용 가능합니다.</div>
+
+![css-display-flex-align-content-stretch](https://user-images.githubusercontent.com/58783926/105168112-fd511380-5b5c-11eb-9620-a054a47b5d13.jpg)
+
+* `align-content`가 `stretch`인 상태
+
+`stretch`인 상태의 경우 flex-item들이 height 값을 임의로 가지고 있지 않다면 위의 그림과 같이 교차 축을 채우기 위해서 flex-item의 height를 임의로 늘리게 됩니다.
+
+![css-display-flex-align-content-flex-start](https://user-images.githubusercontent.com/58783926/105452633-fdb6ef00-5cc1-11eb-899c-385b5b557623.jpg)
+
+* `align-content`가 `flex-start`인 상태
+
+`flex-start`인 상태의 경우 교차축의 시작 기준점으로부터 출발되는 모습입니다.
+
+![css-display-flex-align-content-flex-end](https://user-images.githubusercontent.com/58783926/105452963-964d6f00-5cc2-11eb-9d38-b860db5aaa58.jpg)
+
+* `align-content`가 `flex-end`인 상태
+
+`flex-end`인 상태의 경우 교차축의 끝 부분으로 정렬이 진행되는 모습입니다.
+
+![css-display-flex-align-content-center](https://user-images.githubusercontent.com/58783926/105453058-c432b380-5cc2-11eb-9a17-9f6c810c8ee2.jpg)
+
+* `align-content`가 `center`인 상태
+
+`center`인 모습입니다. 말그대로 한 가운데로 flex-item들이 정렬된 상태입니다.
+
+![css-display-flex-align-content-space-around](https://user-images.githubusercontent.com/58783926/105453226-196ec500-5cc3-11eb-94bd-6937cd20fc2c.jpg)
+
+* `align-content`가 `space-around`인 상태
+
+`space-around`인 상태입니다. 모든 교차축으로 부터 동일한 간격으로 떨어지게 됩니다.
+
+![css-display-flex-align-content-space-between](https://user-images.githubusercontent.com/58783926/105453228-1a9ff200-5cc3-11eb-8631-cbb7db7143f7.jpg)
+
+* `align-content`가 `space-between`인 상태
+
+`space-between`인 상태입니다. flex-item들은 양 끝으로 붙고 flex-item 사이에 동일한 간격이 유지됩니다.
+
+
+### align-items
+`align-items` 속성은 교차 축(cross-axis)에서의 정렬 방법을 정의한다.
+
+<div class="notice--danger">align-items 속성은 flex-wrap 속성을 통해 여러 줄(2줄 이상)이 될 때는 align-content 속성이 우선입니다.</div>
+
+![css-display-flex-align-items-stretch](https://user-images.githubusercontent.com/58783926/105454138-be3dd200-5cc4-11eb-8f35-5c2df67e22f2.jpg)
+
+* `align-items`가 `stretch`인 상태
+
+`align-content`의 속성과 마찬가지로 교차 축을 채우기 위해서 컨텐츠의 길이를 임의로 늘리게 됩니다.
+
+![css-display-flex-align-items-flex-start](https://user-images.githubusercontent.com/58783926/105454140-bed66880-5cc4-11eb-93cf-882676751049.jpg)
+
+* `align-items`가 `flex-start`인 상태
+
+![css-display-flex-align-items-flex-end](https://user-images.githubusercontent.com/58783926/105454149-c138c280-5cc4-11eb-87cf-585d89f1f7aa.jpg)
+
+* `align-items`가 `flex-end`인 상태
+
+![css-display-flex-align-items-center](https://user-images.githubusercontent.com/58783926/105454151-c138c280-5cc4-11eb-9ce0-6e4ab1084882.jpg)
+
+* `align-items`가 `center`인 상태
+
+![css-display-flex-align-items-baseline](https://user-images.githubusercontent.com/58783926/105454157-c1d15900-5cc4-11eb-8b76-198931cf146d.jpg)
+
+* `align-items`가 `baseline`인 상태
+
+`baseline`이란 문자의 기준선에 맞춘다는 뜻인데 일단 이미지 상에서 글자 아래에 검정색 줄이라고 생각하면 됩니다. 말그대로 글자들의 하단 기준선을 맞춰서 정렬이 진행되며 `font-size`가 서로 제각각이라면 높이가 맞지 않을 수 있습니다.
+
+![css-display-flex-align-items-baseline-w3-org](https://user-images.githubusercontent.com/58783926/105454497-4fad4400-5cc5-11eb-9a0f-e7f4170c493a.jpg)
+
+`baseline`을 쉽게 표현해놓은 이미지 입니다. _(from w3.org)_
+
+
+#### align-content와 align-items의 차이점은?
+
+![css-display-flex-align-content-flex-start](https://user-images.githubusercontent.com/58783926/105454605-7e2b1f00-5cc5-11eb-900c-ba8a636f0377.jpg)
+![css-display-flex-align-items-flex-start](https://user-images.githubusercontent.com/58783926/105454607-808d7900-5cc5-11eb-9281-1fabf20f161e.jpg)
+
+(위 이미지 `align-content`)(아래 이미지 `align-items`), 동일한 `flex-start` 값
+
+`align-content`는 flex-line을 정렬하고, 그 정렬된 flex-line을 따라 `align-items`를 통해 flex-item들을 정렬하는 것 입니다.
+
+`align-content`는 `flex-wrap: nowrap;`(한 줄)인 경우에는 사용할 필요가 없습니다. 이유는 한줄이기 때문에 flex-line이 정렬되지 않기 때문이지만,
+
+`align-items`는 `flex-wrap: nowrap;`(한 줄)인 경우에도 사용 가능합니다. 애초에 flex-item들을 정렬시키기 위한 목적이기 때문입니다.
+
+
+## 자료 출처
+
+> HEROPY Tech - <https://heropy.blog/2018/11/24/css-flexible-box/>
